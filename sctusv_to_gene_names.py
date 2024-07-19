@@ -61,7 +61,12 @@ def get_one_refseq(refseq_full,chrom, pos,chr_col,st_col,end_col,var_type):
             (refseq_full[st_col] <= pos) &
             (refseq_full[end_col] >= pos)
         ]
-        
+#    elif var_type=='cnv':
+#        matching_rows = refseq_full[
+#            refseq_full[chr_col].str.contains(chrom_str) &
+#            (refseq_full[st_col] >= pos) &
+#            (refseq_full[end_col] <= (pos+500000))
+#        ]   
     
     
     return matching_rows

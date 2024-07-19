@@ -124,6 +124,7 @@ def get_genes_in_edge(W,u,v,F_info,var_type):
 def save_genes(W,file,folder,var_type,F_info):
     #var_type='snv_sv'
     f = open(folder+'/'+file,'w')
+    # this part should read all the edges from the tree. 
     u,v,genes = get_genes_in_edge(W,6,5,F_info,var_type)
     f.write('Edge '+str(u)+', '+str(v)+','.join(genes)+'\n')
     u,v,genes = get_genes_in_edge(W,5,4,F_info,var_type)

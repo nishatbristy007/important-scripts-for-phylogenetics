@@ -104,7 +104,7 @@ def get_your_refseq_ids(refseq_full,chromes,pos,ref_genome,var_type):
 def get_genes_in_edge(W,u,v,F_info,var_type):
     print('Finding genes...')
     ref_genome = 'hg19'
-    refseq_full = get_full_refseq_ids('Data/hgTables_ucsc_refseq_hg19.txt',ref_genome)
+    refseq_full = get_full_refseq_ids('hgTables_ucsc_refseq_hg19.txt',ref_genome)
     
     chorms_pos = get_W_chrom_pos(W,u,v,F_info)
     chroms = list(chorms_pos['Chrom'])
